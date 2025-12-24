@@ -29,16 +29,17 @@ def parse_input(text)
     return fhttpswww.facebook.com{text}
 
 # ------------------ ESTIMATE REG DATE ------------------
-def estimate_reg(uid)
-    try
+def estimate_reg(uid):
+    try:
         uid = int(uid)
-        if uid  100000000000000
-            return ~2009–2012
-        if uid  1000000000000000
-            return ~2013–2016
-        return ~2017+
-    except
-        return Không xác định
+        if uid < 100000000000000:
+            return "~2009-2012"
+        elif uid < 1000000000000000:
+            return "~2013-2016"
+        else:
+            return "~2017+"
+    except:
+        return "Không xác định"
 
 # ------------------ CHECK FACEBOOK ------------------
 def check_fb(profile_url)
@@ -173,3 +174,4 @@ def run(m)
 
 # ------------------ RUN ------------------
 bot.infinity_polling()
+
